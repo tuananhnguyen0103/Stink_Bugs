@@ -1,0 +1,10 @@
+# Bỏ qua tất cả các file .log
+*.log
+
+# Bỏ qua thư mục build/
+venv/
+DC_Gan/models/
+DC_Gan/generated_images/
+
+# Bỏ qua tệp cấu hình cá nhân
+config.json
