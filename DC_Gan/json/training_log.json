@@ -2077,5 +2077,459 @@
                 "value": "Sigmoid()"
             }
         ]
+    },
+    {
+        "NOISE_DIM": 100,
+        "BATCH_SIZE": 16,
+        "STEPS_PER_EPOCH": 50,
+        "EPOCHS": 500,
+        "img_size": 128,
+        "channels": 3,
+        "Generator_hyper": {
+            "lr": 0.0005,
+            "betas": [
+                0.5,
+                0.999
+            ],
+            "eps": 1e-08,
+            "weight_decay": 0,
+            "amsgrad": false,
+            "maximize": false,
+            "foreach": null,
+            "capturable": false,
+            "differentiable": false,
+            "fused": null
+        },
+        "Discriminator_hyper": {
+            "lr": 0.0001,
+            "betas": [
+                0.5,
+                0.999
+            ],
+            "eps": 1e-08,
+            "weight_decay": 0,
+            "amsgrad": false,
+            "maximize": false,
+            "foreach": null,
+            "capturable": false,
+            "differentiable": false,
+            "fused": null
+        },
+        "Generator": [
+            {
+                "layer_0": 0,
+                "value": "Conv2d(3, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))"
+            },
+            {
+                "layer_1": 1,
+                "value": "LeakyReLU(negative_slope=0.2, inplace=True)"
+            },
+            {
+                "layer_2": 2,
+                "value": "Conv2d(64, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))"
+            },
+            {
+                "layer_3": 3,
+                "value": "BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+            },
+            {
+                "layer_4": 4,
+                "value": "LeakyReLU(negative_slope=0.2, inplace=True)"
+            },
+            {
+                "layer_5": 5,
+                "value": "Conv2d(128, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))"
+            },
+            {
+                "layer_6": 6,
+                "value": "BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+            },
+            {
+                "layer_7": 7,
+                "value": "LeakyReLU(negative_slope=0.2, inplace=True)"
+            },
+            {
+                "layer_8": 8,
+                "value": "Conv2d(256, 512, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))"
+            },
+            {
+                "layer_9": 9,
+                "value": "BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+            },
+            {
+                "layer_10": 10,
+                "value": "LeakyReLU(negative_slope=0.2, inplace=True)"
+            },
+            {
+                "layer_11": 11,
+                "value": "Flatten(start_dim=1, end_dim=-1)"
+            },
+            {
+                "layer_12": 12,
+                "value": "Dropout(p=0.4, inplace=False)"
+            },
+            {
+                "layer_13": 13,
+                "value": "Linear(in_features=32768, out_features=1, bias=True)"
+            },
+            {
+                "layer_14": 14,
+                "value": "Sigmoid()"
+            }
+        ],
+        "Discriminator": [
+            {
+                "layer_0": 0,
+                "value": "Conv2d(3, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))"
+            },
+            {
+                "layer_1": 1,
+                "value": "LeakyReLU(negative_slope=0.2, inplace=True)"
+            },
+            {
+                "layer_2": 2,
+                "value": "Conv2d(64, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))"
+            },
+            {
+                "layer_3": 3,
+                "value": "BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+            },
+            {
+                "layer_4": 4,
+                "value": "LeakyReLU(negative_slope=0.2, inplace=True)"
+            },
+            {
+                "layer_5": 5,
+                "value": "Conv2d(128, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))"
+            },
+            {
+                "layer_6": 6,
+                "value": "BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+            },
+            {
+                "layer_7": 7,
+                "value": "LeakyReLU(negative_slope=0.2, inplace=True)"
+            },
+            {
+                "layer_8": 8,
+                "value": "Conv2d(256, 512, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))"
+            },
+            {
+                "layer_9": 9,
+                "value": "BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+            },
+            {
+                "layer_10": 10,
+                "value": "LeakyReLU(negative_slope=0.2, inplace=True)"
+            },
+            {
+                "layer_11": 11,
+                "value": "Flatten(start_dim=1, end_dim=-1)"
+            },
+            {
+                "layer_12": 12,
+                "value": "Dropout(p=0.4, inplace=False)"
+            },
+            {
+                "layer_13": 13,
+                "value": "Linear(in_features=32768, out_features=1, bias=True)"
+            },
+            {
+                "layer_14": 14,
+                "value": "Sigmoid()"
+            }
+        ],
+        "epoch": 499,
+        "g_loss": 8.949990234375,
+        "d_loss": 0.044953137235715986,
+        "model_structure": [
+            {
+                "layer_0": 0,
+                "value": "Conv2d(3, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))"
+            },
+            {
+                "layer_1": 1,
+                "value": "LeakyReLU(negative_slope=0.2, inplace=True)"
+            },
+            {
+                "layer_2": 2,
+                "value": "Conv2d(64, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))"
+            },
+            {
+                "layer_3": 3,
+                "value": "BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+            },
+            {
+                "layer_4": 4,
+                "value": "LeakyReLU(negative_slope=0.2, inplace=True)"
+            },
+            {
+                "layer_5": 5,
+                "value": "Conv2d(128, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))"
+            },
+            {
+                "layer_6": 6,
+                "value": "BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+            },
+            {
+                "layer_7": 7,
+                "value": "LeakyReLU(negative_slope=0.2, inplace=True)"
+            },
+            {
+                "layer_8": 8,
+                "value": "Conv2d(256, 512, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))"
+            },
+            {
+                "layer_9": 9,
+                "value": "BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+            },
+            {
+                "layer_10": 10,
+                "value": "LeakyReLU(negative_slope=0.2, inplace=True)"
+            },
+            {
+                "layer_11": 11,
+                "value": "Flatten(start_dim=1, end_dim=-1)"
+            },
+            {
+                "layer_12": 12,
+                "value": "Dropout(p=0.4, inplace=False)"
+            },
+            {
+                "layer_13": 13,
+                "value": "Linear(in_features=32768, out_features=1, bias=True)"
+            },
+            {
+                "layer_14": 14,
+                "value": "Sigmoid()"
+            }
+        ]
+    },
+    {
+        "NOISE_DIM": 100,
+        "BATCH_SIZE": 16,
+        "STEPS_PER_EPOCH": 50,
+        "EPOCHS": 500,
+        "img_size": 128,
+        "channels": 3,
+        "Generator_hyper": {
+            "lr": 0.0002,
+            "betas": [
+                0.5,
+                0.999
+            ],
+            "eps": 1e-08,
+            "weight_decay": 0,
+            "amsgrad": false,
+            "maximize": false,
+            "foreach": null,
+            "capturable": false,
+            "differentiable": false,
+            "fused": null
+        },
+        "Discriminator_hyper": {
+            "lr": 1e-05,
+            "betas": [
+                0.5,
+                0.999
+            ],
+            "eps": 1e-08,
+            "weight_decay": 0,
+            "amsgrad": false,
+            "maximize": false,
+            "foreach": null,
+            "capturable": false,
+            "differentiable": false,
+            "fused": null
+        },
+        "Generator": [
+            {
+                "layer_0": 0,
+                "value": "Conv2d(3, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))"
+            },
+            {
+                "layer_1": 1,
+                "value": "LeakyReLU(negative_slope=0.2, inplace=True)"
+            },
+            {
+                "layer_2": 2,
+                "value": "Conv2d(64, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))"
+            },
+            {
+                "layer_3": 3,
+                "value": "BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+            },
+            {
+                "layer_4": 4,
+                "value": "LeakyReLU(negative_slope=0.2, inplace=True)"
+            },
+            {
+                "layer_5": 5,
+                "value": "Conv2d(128, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))"
+            },
+            {
+                "layer_6": 6,
+                "value": "BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+            },
+            {
+                "layer_7": 7,
+                "value": "LeakyReLU(negative_slope=0.2, inplace=True)"
+            },
+            {
+                "layer_8": 8,
+                "value": "Conv2d(256, 512, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))"
+            },
+            {
+                "layer_9": 9,
+                "value": "BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+            },
+            {
+                "layer_10": 10,
+                "value": "LeakyReLU(negative_slope=0.2, inplace=True)"
+            },
+            {
+                "layer_11": 11,
+                "value": "Flatten(start_dim=1, end_dim=-1)"
+            },
+            {
+                "layer_12": 12,
+                "value": "Dropout(p=0.4, inplace=False)"
+            },
+            {
+                "layer_13": 13,
+                "value": "Linear(in_features=32768, out_features=1, bias=True)"
+            },
+            {
+                "layer_14": 14,
+                "value": "Sigmoid()"
+            }
+        ],
+        "Discriminator": [
+            {
+                "layer_0": 0,
+                "value": "Conv2d(3, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))"
+            },
+            {
+                "layer_1": 1,
+                "value": "LeakyReLU(negative_slope=0.2, inplace=True)"
+            },
+            {
+                "layer_2": 2,
+                "value": "Conv2d(64, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))"
+            },
+            {
+                "layer_3": 3,
+                "value": "BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+            },
+            {
+                "layer_4": 4,
+                "value": "LeakyReLU(negative_slope=0.2, inplace=True)"
+            },
+            {
+                "layer_5": 5,
+                "value": "Conv2d(128, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))"
+            },
+            {
+                "layer_6": 6,
+                "value": "BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+            },
+            {
+                "layer_7": 7,
+                "value": "LeakyReLU(negative_slope=0.2, inplace=True)"
+            },
+            {
+                "layer_8": 8,
+                "value": "Conv2d(256, 512, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))"
+            },
+            {
+                "layer_9": 9,
+                "value": "BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+            },
+            {
+                "layer_10": 10,
+                "value": "LeakyReLU(negative_slope=0.2, inplace=True)"
+            },
+            {
+                "layer_11": 11,
+                "value": "Flatten(start_dim=1, end_dim=-1)"
+            },
+            {
+                "layer_12": 12,
+                "value": "Dropout(p=0.4, inplace=False)"
+            },
+            {
+                "layer_13": 13,
+                "value": "Linear(in_features=32768, out_features=1, bias=True)"
+            },
+            {
+                "layer_14": 14,
+                "value": "Sigmoid()"
+            }
+        ],
+        "epoch": 499,
+        "g_loss": 0.758197067975998,
+        "d_loss": 1.3369624948501586,
+        "model_structure": [
+            {
+                "layer_0": 0,
+                "value": "Conv2d(3, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))"
+            },
+            {
+                "layer_1": 1,
+                "value": "LeakyReLU(negative_slope=0.2, inplace=True)"
+            },
+            {
+                "layer_2": 2,
+                "value": "Conv2d(64, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))"
+            },
+            {
+                "layer_3": 3,
+                "value": "BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+            },
+            {
+                "layer_4": 4,
+                "value": "LeakyReLU(negative_slope=0.2, inplace=True)"
+            },
+            {
+                "layer_5": 5,
+                "value": "Conv2d(128, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))"
+            },
+            {
+                "layer_6": 6,
+                "value": "BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+            },
+            {
+                "layer_7": 7,
+                "value": "LeakyReLU(negative_slope=0.2, inplace=True)"
+            },
+            {
+                "layer_8": 8,
+                "value": "Conv2d(256, 512, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))"
+            },
+            {
+                "layer_9": 9,
+                "value": "BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+            },
+            {
+                "layer_10": 10,
+                "value": "LeakyReLU(negative_slope=0.2, inplace=True)"
+            },
+            {
+                "layer_11": 11,
+                "value": "Flatten(start_dim=1, end_dim=-1)"
+            },
+            {
+                "layer_12": 12,
+                "value": "Dropout(p=0.4, inplace=False)"
+            },
+            {
+                "layer_13": 13,
+                "value": "Linear(in_features=32768, out_features=1, bias=True)"
+            },
+            {
+                "layer_14": 14,
+                "value": "Sigmoid()"
+            }
+        ]
     }
 ]

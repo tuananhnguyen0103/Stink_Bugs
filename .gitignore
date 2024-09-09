@@ -5,6 +5,9 @@
 venv/
 DC_Gan/models/
 DC_Gan/generated_images/
-
+DC_Gan/generated_images.rar
+Images.rar
+Images
+Annotations
 # Bỏ qua tệp cấu hình cá nhân
 config.json
